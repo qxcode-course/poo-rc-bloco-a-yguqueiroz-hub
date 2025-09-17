@@ -9,44 +9,23 @@ matricula: "Digite sua matrícula aqui por obséquio"
 # instalando o tko
 pipx install tko
 
-# Instalando algumas extensões úteis para todas as linguagens
+# Instalando algumas extensões úteis
+code --install-extension ms-python.python
 code --install-extension usernamehw.errorlens
 code --install-extension jeff-hughes.open-terminal-here
-```
 
-Para golang, java, cpp, c, basta você abrir um arquivo de linguagem e aceitar a instalação da extensão para vscode.
-
-Para typescript:
-
-```
-cd scripts
-./install_ts.sh # se você for usar typescript
-```
-
-Para python:
-
-```bash
 # Abra o arquivo de configurações do vscode para o projeto e adicione o seguinte parâmetro
 code .vscode/settings.json
 {
     "python.analysis.typeCheckingMode": "strict"
 }
-```
 
-## TKO
+# Crie seu repositório local assim:
 
-```bash
-## Se você precisar criar um repositório do zero, pode fazer com o seguinte comando
-
-# para fup
-tko init --remote fup --folder fup
-# para poo
-tko init --remote poo --folder poo
-# para ed
-tko init --remote ed --folder ed
+tko init --remote poo --folder poo --lang py --filter BLOCO_A BLOCO_B
 
 ## Interagindo com seu repositório
-tko open <pasta>
+tko open poo
 
 ## Rodando um código diretamente
 tko run <arquivo_codigo>  # usando interface default
